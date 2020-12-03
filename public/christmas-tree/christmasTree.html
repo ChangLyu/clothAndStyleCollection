@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./christmasTree.css">
+</head>
+
+<body>
+    <!-- lots of HTML here -->
+
+    <div class="container">
+        <div id='christmasTree'></div>
+    </div>
+
+    <audio controls autoplay id='audio'>
+        <source src="ChuckBrown_EarlyMorningSnowfall.mp3" type="audio/mp3">
+    </audio>
+    <div>
+        <form onsubmit="reDraw()">
+            <label for="blockNum">Block Number: </label>
+            <input type="text" id="blockNum"><br>
+            <label for="RowNum">Row Number: </label>
+            <input type="text" id="RowNum"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    <script src="christmasTree.js"></script>
+
+</body>
+
+</html>
