@@ -1,8 +1,8 @@
 {
-  "name": "fashion-app",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://changlyu.github.io/fashion-app/",
+  "homepage": "https://changlyu.github.io/website/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
