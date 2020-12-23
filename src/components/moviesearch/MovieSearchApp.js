@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect } from "react";
-import Header from "./Header";
+import Header from "../Header";
 import Movie from "./Movie";
 import Search from "./Search";
-import './App.css';
+import './../App.css';
 
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b"; // you should replace this with yours
 
