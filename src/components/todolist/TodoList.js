@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
-import { getTodos } from "../../redux/selectors/selectors";
+import { getTodos, getTodosByCurrentVisibilityFilter } from "../../redux/selectors/selectors";
+import Todo from "./Todo";
 
 const TodoList = ({ todos }) => {
     return (<ul>
@@ -18,4 +19,5 @@ const TodoList = ({ todos }) => {
 //         allIds && allIds.length ? allIds.map(id => { byIds ? { ...byIds[id], id } : null }) : null; // {content, completed, id}
 //     return { todos };
 // }
-export default connect(state => ({ todos: getTodos(state) }))(TodoList);
+
+export default connect(state => ({ todos: getTodosByCurrentVisibilityFilter(state) }))(TodoList);
