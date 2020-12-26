@@ -1,6 +1,6 @@
 import React from "react";
 import AddTodo from "./AddTodo";
-import './TodoApp.css';
+import './TodoApp.scss';
 import TodoList from "./TodoList";
 import VisibilityFilters from "./VisibilityFilters";
 

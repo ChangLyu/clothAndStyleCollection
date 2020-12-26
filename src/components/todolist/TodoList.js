@@ -1,23 +1,27 @@
 import { connect } from "react-redux";
 import { getTodos, getTodosByCurrentVisibilityFilter } from "../../redux/selectors/selectors";
+import { updateTodoAction, toggleTodoAction, deleteTodoAction } from "./../../redux/actions/todoActions";
 import Todo from "./Todo";
 
-const TodoList = ({ todos }) => {
-    return (<ul>
-        {todos && todos.length ?
-            todos.map((todo, index) => {
-                return <Todo key={`todo-${todo.id}`} todo={todo} />;
-            })
-            : "No Todos, yay!"
-        }
-    </ul>)
+const TodoList = ({ todos, updateTodoAction, deleteTodoAction, toggleTodoAction }) => {
+    const updateTodo = (id, newValue) => {
+        updateTodoAction(id, newValue);
+    }
+
+    return (
+        <div>
+            {todos && todos.length ?
+                todos.map((todo, index) => {
+                    return <Todo key={`todo-${todo.id}`} todo={todo} updateTodo={updateTodo}
+                        deleteTodo={deleteTodoAction}
+                        toggleTodo={toggleTodoAction}
+                    />;
+                })
+                : "Nothing here!"
+            }
+        </div>)
 };
 
-// const mapStateToProps = state => {
-//     const { byIds, allIds } = state.todos || {};
-//     const todos =
-//         allIds && allIds.length ? allIds.map(id => { byIds ? { ...byIds[id], id } : null }) : null; // {content, completed, id}
-//     return { todos };
-// }
-
-export default connect(state => ({ todos: getTodosByCurrentVisibilityFilter(state) }))(TodoList);
+export default connect(state => ({ todos: getTodosByCurrentVisibilityFilter(state) }),
+    { updateTodoAction, deleteTodoAction, toggleTodoAction }
+)(TodoList);

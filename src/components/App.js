@@ -5,12 +5,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Menu } from 'antd';
 import MovieSearchApp from './moviesearch/MovieSearchApp';
 import TodoApp from './todolist/TodoApp';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
+import { VideoCameraOutlined, EditOutlined } from '@ant-design/icons';
 /**TODO:
- * 1. use router to config different app
- * 2. add another movie search api
  * 3. refactor movie search app, refactor reducer out
  * 3. add more functions, ranks system
  * 3. click and see more information
@@ -18,30 +19,32 @@ import TodoApp from './todolist/TodoApp';
 function App() {
   return (
     <div>
-      <h1>Header</h1>
+      <h1>Chang's React Practise Website</h1>
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
+          <div className="menu-container">
+            <Menu mode="horizontal">
+              <Menu.Item icon={<VideoCameraOutlined />} key="moviesearch">
                 <Link to="/moviesearch">Search Movie</Link>
-              </li>
-              <li>
+              </Menu.Item>
+              <Menu.Item icon={<EditOutlined />} key="todoapp">
                 <Link to="/todoapp">To do App</Link>
-              </li>
-            </ul>
-          </nav>
+              </Menu.Item>
+            </Menu>
+          </div>
 
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/moviesearch">
-              <MovieSearchApp />
-            </Route>
-            <Route path="/todoapp">
-              <TodoApp />
-            </Route>
-          </Switch>
+          <div className="main-content">
+            <Switch>
+              <Route path="/moviesearch">
+                <MovieSearchApp />
+              </Route>
+              <Route path="/todoapp">
+                <TodoApp />
+              </Route>
+            </Switch>
+          </div>
         </div>
       </Router>
     </div>
