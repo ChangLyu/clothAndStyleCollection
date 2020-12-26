@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Button, Input } from 'antd';
 
 const Search = (props) => {
     const [searchValue, setSearchValue] = useState("");
@@ -13,20 +13,22 @@ const Search = (props) => {
     }
 
     const callSearchFunction = (e) => {
-        e.preventDefault();
-        props.search(searchValue);
-        resetInputField();
+        if (e.target.value) {
+            e.preventDefault();
+            props.search(searchValue);
+            resetInputField();
+        }
     }
 
     return (
-        <form className="search">
-            <input
+        <div className="search-container">
+            <Input
                 value={searchValue}
                 onChange={handleSearchInputChanges}
-                type="text"
-            />
-            <input onClick={callSearchFunction} type="submit" value="SEARCH" />
-        </form>
+                onPressEnter={callSearchFunction}
+            ></Input>
+            <Button onClick={callSearchFunction} >Search</Button>
+        </div>
     );
 }
 
