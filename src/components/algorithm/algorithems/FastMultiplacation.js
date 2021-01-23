@@ -40,20 +40,26 @@ export default function FastMultiplication() {
 
 
     return (
-        <div >
-            <div>
-                <Input placeholder="Input first number" onChange={handleFirst} ></Input>
-                <Input placeholder="Input second number" onChange={handleSecond}></Input>
-                <Button onClick={handleKaratsubaMul}>Karatsuba Multiply</Button>
-                <Button onClick={handleNormalMul}>Normal Multiply By JS *</Button>
-                <Button onClick={handleNormalMulWithBigInt}>Normal Multiply By Big Int Library</Button>
+        <div className="container" >
+            <div className="container"  >
+                <div className="container" >
+                    <Input placeholder="Input first number" onChange={handleFirst} ></Input>
+                    <Input placeholder="Input second number" onChange={handleSecond}></Input>
+                </div>
+                <div className="container" >
+                    <Button onClick={handleKaratsubaMul}>Karatsuba Multiply</Button>
+                    <Button onClick={handleNormalMul}>Normal Multiply By JS *</Button>
+                    <Button onClick={handleNormalMulWithBigInt}>Normal Multiply By Big Int Library</Button>
+                </div>
             </div>
-            <div>Karatsuba Result: {karaCalcResult.result ? karaCalcResult.result : 'None'}</div>
-            <div>Karatsuba Calculate Time: {karaCalcResult.time ? karaCalcResult.time : 'None'}</div>
-            <div>Normal Result by using *: {norCalcResult.result ? norCalcResult.result : 'None'}</div>
-            <div>Normal Calculate Time by using *: {norCalcResult.time ? norCalcResult.time : 'None'}</div>
-            <div>Normal Result by using big int library directly: {norCalcResultByBigInt.result ? norCalcResultByBigInt.result : 'None'}</div>
-            <div>Normal Calculate Time by using big int library directly: {norCalcResultByBigInt.time ? norCalcResultByBigInt.time : 'None'}</div>
-        </div>
+            <div className="container" >
+                <div>Karatsuba Result: {karaCalcResult.result ? karaCalcResult.result : 'None'}</div>
+                <div>Karatsuba Calculate Time: {karaCalcResult.time ? karaCalcResult.time : 'None'}</div>
+                <div>Normal Result by using *: {norCalcResult.result ? norCalcResult.result : 'None'}</div>
+                <div>Normal Calculate Time by using *: {norCalcResult.time ? norCalcResult.time : 'None'}</div>
+                <div>Normal Result by using big int library directly: {norCalcResultByBigInt.result ? norCalcResultByBigInt.result : 'None'}</div>
+                <div>Normal Calculate Time by using big int library directly: {norCalcResultByBigInt.time ? norCalcResultByBigInt.time : 'None'}</div>
+            </div>
+        </div >
     );
 }
