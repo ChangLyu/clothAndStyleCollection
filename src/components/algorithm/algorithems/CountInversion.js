@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Input } from 'antd';
 import { countInversion } from "../../../utils/algorithm.countinversion";
 export default function CountInversion() {
+    // todo: add other algorithem to count inversion, and do time comparision
     const [list, setList] = useState(null);
     const [file, setFile] = useState(null);
     const [result, setResult] = useState(null);

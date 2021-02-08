@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import CountInversion from "./algorithems/CountInversion";
 import './AlgorithmApp.scss';
+import QuickSort from "./algorithems/QuickSort";
 
 export default function AlgorithmApp() {
     let { path, url } = useRouteMatch();
@@ -21,6 +22,9 @@ export default function AlgorithmApp() {
                 <li>
                     <Link to={`${url}/countinversion`}>Count inversions of numbers in list</Link>
                 </li>
+                <li>
+                    <Link to={`${url}/quicksort`}>Quick Sort</Link>
+                </li>
             </ul>
             <Switch>
                 <Route path={`${path}/fastmultiply`}>
@@ -28,6 +32,9 @@ export default function AlgorithmApp() {
                 </Route>
                 <Route path={`${path}/countinversion`}>
                     <CountInversion />
+                </Route>
+                <Route path={`${path}/quicksort`}>
+                    <QuickSort />
                 </Route>
             </Switch>
 
