@@ -5,10 +5,8 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from "./redux/store";
-import Amplify from "aws-amplify";
-import awsExports from "./aws-exports";
 
-Amplify.configure(awsExports);
+
 const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>

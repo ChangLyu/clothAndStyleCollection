@@ -11,7 +11,6 @@ import TodoApp from './todolist/TodoApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
 import { VideoCameraOutlined, EditOutlined, BookOutlined } from '@ant-design/icons';
-import TodoAmplifyApp from './amplifyTodo/TodoAmplifyApp';
 import AlgorithmApp from './algorithm/AlgorithmApp';
 /**TODO:
  * 3. refactor movie search app, refactor reducer out
@@ -35,9 +34,6 @@ function App() {
               <Menu.Item icon={<BookOutlined />} key="algorithm">
                 <Link to="/algorithm">Algorithm</Link>
               </Menu.Item>
-              <Menu.Item icon={<EditOutlined />} key="todoappAmplify">
-                <Link to="/todoappamplify">To do App with Amplify</Link>
-              </Menu.Item>
             </Menu>
           </div>
 
@@ -53,9 +49,6 @@ function App() {
               </Route>
               <Route path="/algorithm">
                 <AlgorithmApp />
-              </Route>
-              <Route path="/todoappamplify">
-                <TodoAmplifyApp />
               </Route>
             </Switch>
           </div>
