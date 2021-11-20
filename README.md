@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-https://changlyu.github.io/website/
+https://changlyu.github.io/reactproject/
 
 ## Available Scripts
 
