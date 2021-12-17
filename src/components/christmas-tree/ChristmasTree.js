@@ -122,7 +122,6 @@ class ChristmasTree extends React.Component {
     let RowNum = document.getElementById("RowNum").value;
     this.drawCustomTree(blockNum, RowNum);
   }
-
   render() {
     return (
       <div className="outer_container">
