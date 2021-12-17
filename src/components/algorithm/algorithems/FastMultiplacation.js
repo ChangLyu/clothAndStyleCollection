@@ -56,9 +56,9 @@ export default function FastMultiplication() {
                 <div>Karatsuba Result: {karaCalcResult.result ? karaCalcResult.result : 'None'}</div>
                 <div>Karatsuba Calculate Time: {karaCalcResult.time ? karaCalcResult.time : 'None'}</div>
                 <div>Normal Result by using *: {norCalcResult.result ? norCalcResult.result : 'None'}</div>
-                <div>Normal Calculate Time by using *: {norCalcResult.time ? norCalcResult.time : 'None'}</div>
+                <div>Normal Calculate Time by using *: {isNaN(norCalcResult.time )? 'None': norCalcResult.time }</div>
                 <div>Normal Result by using big int library directly: {norCalcResultByBigInt.result ? norCalcResultByBigInt.result : 'None'}</div>
-                <div>Normal Calculate Time by using big int library directly: {norCalcResultByBigInt.time ? norCalcResultByBigInt.time : 'None'}</div>
+                <div>Normal Calculate Time by using big int library directly: {isNaN(norCalcResultByBigInt.time )? 'None': norCalcResultByBigInt.time }</div>
             </div>
         </div >
     );

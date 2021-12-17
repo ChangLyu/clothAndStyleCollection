@@ -27,7 +27,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 loading: false,
-                errorMessage: action.error
+                errorMessage: action.payload
             };
         default:
             return state;
@@ -65,8 +65,8 @@ const MovieSearchApp = () => {
                     });
                 } else {
                     dispatch({
-                        type: "SEARCH_MOVIES_SUCCESS",
-                        payload: jsonResponse.Search
+                        type: "SEARCH_MOVIES_FAILURE",
+                        payload: jsonResponse.Error
                     });
                 }
             });

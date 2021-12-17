@@ -13,7 +13,7 @@ const Search = (props) => {
     }
 
     const callSearchFunction = (e) => {
-        if (e.target.value) {
+        if (searchValue) {
             e.preventDefault();
             props.search(searchValue);
             resetInputField();
