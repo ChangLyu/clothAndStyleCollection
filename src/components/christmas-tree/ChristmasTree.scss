@@ -1,0 +1,51 @@
+.outer_container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        text-align: center;
+    }
+    .inner_container{
+        margin:50px auto;
+    }
+}
+.christmastree_container {
+    background-color: black;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .treeLeaf {
+    width: 13px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .blink1 {
+    animation: blink 800ms linear infinite;
+  }
+  .blink2 {
+    animation: blink 1200ms linear infinite;
+  }
+  .blink3 {
+    animation: blink 1600ms linear infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

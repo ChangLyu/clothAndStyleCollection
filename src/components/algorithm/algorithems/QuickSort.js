@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Input } from 'antd';
 import { quickSortFirstPivot, quickSortLastPivot, quickSortMedianPivot } from "../../../utils/algorithm.quicksort";
-import { logger } from "../../../utils/logger";
 export default function QuickSort() {
     // todo: add other algorithem to count inversion, and do time comparision
     const [list, setList] = useState(null);

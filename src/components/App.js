@@ -10,9 +10,10 @@ import MovieSearchApp from './moviesearch/MovieSearchApp';
 import TodoApp from './todolist/TodoApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
-import { VideoCameraOutlined, EditOutlined, BookOutlined } from '@ant-design/icons';
+import { VideoCameraOutlined, EditOutlined, BookOutlined, SmileOutlined } from '@ant-design/icons';
 import AlgorithmApp from './algorithm/AlgorithmApp';
 import { Container } from 'react-bootstrap';
+import ChristmasTree from './christmas-tree/ChristmasTree';
 /**TODO:
  * 3. refactor movie search app, refactor reducer out
  * 3. add more functions, ranks system
@@ -27,6 +28,9 @@ function App() {
           <div>
             <div className="menu-container">
               <Menu mode="horizontal">
+              <Menu.Item icon={<SmileOutlined />} key="christmastree">
+                  <Link to="/christmastree">Happy Christmas!</Link>
+                </Menu.Item>
                 <Menu.Item icon={<VideoCameraOutlined />} key="moviesearch">
                   <Link to="/moviesearch">Search Movie</Link>
                 </Menu.Item>
@@ -43,6 +47,12 @@ function App() {
             renders the first one that matches the current URL. */}
             <div className="main-content">
               <Switch>
+                <Route exact path="/">
+                  <ChristmasTree />
+                </Route>
+                <Route path="/christmastree">
+                  <ChristmasTree />
+                </Route>
                 <Route path="/moviesearch">
                   <MovieSearchApp />
                 </Route>

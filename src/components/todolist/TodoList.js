@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { getTodos, getTodosByCurrentVisibilityFilter } from "../../redux/selectors/selectors";
+import { getTodosByCurrentVisibilityFilter } from "../../redux/selectors/selectors";
 import { updateTodoAction, toggleTodoAction, deleteTodoAction } from "./../../redux/actions/todoActions";
 import Todo from "./Todo";
 
