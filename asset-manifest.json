@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/reactproject/static/css/main.7305cbb5.chunk.css",
-    "main.js": "/reactproject/static/js/main.db7cc99c.chunk.js",
-    "main.js.map": "/reactproject/static/js/main.db7cc99c.chunk.js.map",
+    "main.css": "/reactproject/static/css/main.7d1e4cf6.chunk.css",
+    "main.js": "/reactproject/static/js/main.e2296822.chunk.js",
+    "main.js.map": "/reactproject/static/js/main.e2296822.chunk.js.map",
     "runtime-main.js": "/reactproject/static/js/runtime-main.2108401a.js",
     "runtime-main.js.map": "/reactproject/static/js/runtime-main.2108401a.js.map",
     "static/css/2.9c468131.chunk.css": "/reactproject/static/css/2.9c468131.chunk.css",
@@ -12,15 +12,14 @@
     "static/js/3.05a0d263.chunk.js.map": "/reactproject/static/js/3.05a0d263.chunk.js.map",
     "index.html": "/reactproject/index.html",
     "static/css/2.9c468131.chunk.css.map": "/reactproject/static/css/2.9c468131.chunk.css.map",
-    "static/css/main.7305cbb5.chunk.css.map": "/reactproject/static/css/main.7305cbb5.chunk.css.map",
-    "static/js/2.5de9f870.chunk.js.LICENSE.txt": "/reactproject/static/js/2.5de9f870.chunk.js.LICENSE.txt",
-    "static/media/ChuckBrown_EarlyMorningSnowfall.6d0495f2.mp3": "/reactproject/static/media/ChuckBrown_EarlyMorningSnowfall.6d0495f2.mp3"
+    "static/css/main.7d1e4cf6.chunk.css.map": "/reactproject/static/css/main.7d1e4cf6.chunk.css.map",
+    "static/js/2.5de9f870.chunk.js.LICENSE.txt": "/reactproject/static/js/2.5de9f870.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2108401a.js",
     "static/css/2.9c468131.chunk.css",
     "static/js/2.5de9f870.chunk.js",
-    "static/css/main.7305cbb5.chunk.css",
-    "static/js/main.db7cc99c.chunk.js"
+    "static/css/main.7d1e4cf6.chunk.css",
+    "static/js/main.e2296822.chunk.js"
   ]
 }
